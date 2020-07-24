@@ -1,22 +1,24 @@
 {
-  "name": "electron-quick-start",
+  "name": "Uppy",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "This is a Small implemetation",
   "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "9.1.1"
+  },
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "electron": "^9.1.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrazyCoder009/Uppy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrazyCoder009/Uppy/issues"
+  },
+  "homepage": "https://github.com/CrazyCoder009/Uppy#readme"
 }
