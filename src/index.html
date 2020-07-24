@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/add.css">
+    
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+        <h1>Uppy</h1>
+        <div class="row">
+          
+          <div id="container">
+            <p class="subtext">Current Numbers</p>
+            <h1 id="price">Loading.. </h1>
+          </div>
+      
+          <div id="goal-container">
+              <p><img src="../assets/images/up.svg"><span id="target">Choose a Target Number</span></p>
+          </div>
+
+          <div id="right-container">
+            <button id="notifyBtn">Notify Me when..</button>
+          </div>
+
+      </div>
+      <script src="index.js"></script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron')
+const shell = require('electron').shell
 
 function createWindow () {
   // Create the browser window.
@@ -11,10 +12,53 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadFile('index.html')
+  win.loadFile('src/index.html')
 
   // Open the DevTools.
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
+
+  var menu = Menu.buildFromTemplate([
+    {
+        label:'Menu',
+        submenu:[
+            {label:'Adjust Notifications Value'},
+            {
+                label:'MarketCap',
+                click(){
+                    shell.openExternal('https://google.com')
+                }
+            },
+            {type: 'separator'},
+            {
+                label:'Exit',
+                click() {
+                    app.quit()
+                }
+            },
+        ]
+    },
+
+    {
+        label:'Info',
+        submenu:[
+            {label:'Adjust Notifications Value'},
+            {
+                label:'MarketCap',
+                click(){
+                    shell.openExternal('https://google.com')
+                }
+            },
+            {type: 'separator'},
+            {
+                label:'Exit',
+                click() {
+                    app.quit()
+                }
+            },
+        ]
+    }
+  ])
+  Menu.setApplicationMenu(menu);
 }
 
 // This method will be called when Electron has finished
@@ -32,8 +76,7 @@ app.on('window-all-closed', () => {
 })
 
 app.on('activate', () => {
-  // On macOS it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
+
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
   }
